@@ -1,0 +1,88 @@
+<!--
+
+(c) Saeed insurance company
+2012-12-24
+(c) Saeed insurance company
+
+Online WSDL SOAP generator 0.1a
+Julien Blitte
+-->
+<definitions xmlns:tns="com.saeed.insurance.wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="com.saeed.insurance.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="(c) Saeed insurance company" targetNamespace="com.saeed.insurance.wsdl">
+<!--  definition of datatypes  -->
+<types>
+<schema xmlns="http://www.w3.org/2000/10/XMLSchema" targetNamespace="com.saeed.insurance.xsd">
+<element name="email">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="companyID">
+<complexType>
+<all>
+<element name="value" type="int"/>
+</all>
+</complexType>
+</element>
+<element name="response">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+</schema>
+</types>
+<!--  response messages  -->
+<message name="returns_response">
+<part name="response" type="xsd:response"/>
+</message>
+<!--  request messages  -->
+<message name="getAllPatients">
+<part name="companyID" type="xsd:companyID"/>
+</message>
+<message name="getPatient">
+<part name="companyID" type="xsd:companyID"/>
+<part name="email" type="xsd:email"/>
+</message>
+<!--  server's services  -->
+<portType name="Saeed WebService">
+<operation name="getAllPatients">
+<input message="tns:getAllPatients"/>
+<output message="tns:returns_response"/>
+</operation>
+<operation name="getPatient">
+<input message="tns:getPatient"/>
+<output message="tns:returns_response"/>
+</operation>
+</portType>
+<!--  server encoding  -->
+<binding name="Saeed WebService_webservices" type="tns:Saeed WebService">
+<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="getAllPatients">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#getAllPatients"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="getPatient">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#getPatient"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+</binding>
+<!--  access to service provider  -->
+<service name="Saeed insurance company">
+<port name="Saeed insurance company_0" binding="Saeed WebService_webservices">
+<soap:address location="http://localhost/www/Saeed/services/WebService.php"/>
+</port>
+</service>
+</definitions>

@@ -1,0 +1,87 @@
+html 
+{
+    height: 100%
+}
+
+body
+{ 
+    height: 100%;
+    direction: rtl;
+}
+
+.multiselect 
+{
+    width: 450px;
+    height: 200px;
+}
+
+#map_canvas 
+{
+    height: 500px;
+    width: 500px
+}
+
+input[type='text'], input[type='password'], select
+{
+    width: 200px
+}
+
+textArea
+{
+    width: 200px;
+    height: 100px;
+}
+
+.title
+{
+    font-weight:bold;
+}
+
+.titleTD
+{
+    width: 100px;
+}
+
+/* change the direction of jqueryUI tabs */
+.ui-tabs { direction: rtl; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected,
+.ui-tabs .ui-tabs-nav li.ui-state-default {float: right; }
+.ui-tabs .ui-tabs-nav li a { float: right; }
+/**/
+
+/* fix pading problem for tabs */
+#browseCentersTabs ul li 
+{
+    padding:0px 0;
+}
+/**/
+
+#searchResults, #browseResults
+{
+    width: 100%;
+}
+
+#searchResults tr:nth-child(even) , #browseResults tr:nth-child(even) 
+{
+   background: #FFF;
+}
+
+#searchResults tr:nth-child(odd) , #browseResults tr:nth-child(odd) 
+{
+   background: #CCC;
+}
+
+/*this style for prescription*/
+#patientInfo .odd, #doctorInfo .odd
+{
+    font-family: "Courier New", Times, serif;;
+}
+
+#patientInfo .even, #doctorInfo .even
+{
+    font-size: 20px;
+    font-family: "Segoe UI", Times, serif;
+    padding-left: 15em;
+    text-decoration: underline;
+}
+/**/

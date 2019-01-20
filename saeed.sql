@@ -292,10 +292,10 @@ CREATE TABLE IF NOT EXISTS `patient` (
 --
 
 INSERT INTO `patient` (`id`, `company_id`, `firstName`, `lastName`, `gender`, `nationalNumber`, `email`, `mobile`, `phone`, `address`, `expiryDate`, `numOfVisits`, `money`) VALUES
-(14, 14, 'أحمد', 'الشامي', 'male', '1234', 'bilalo89@gmail.com', '093434w', '2320394231', 'برامكة', '2013-12-22 00:00:00', 12, 1560),
-(15, 14, 'أحمد', 'مككي', 'male', '4321', 'bilalo89@gmail.com', NULL, NULL, NULL, '2013-12-22 00:00:00', 6, 50030),
-(16, 14, 'تحسين', 'المنفلوطي', 'male', '0011', 'bilalo89@gmail.com', '0999111222', '1112223', 'ركن الدين', '2013-12-23 00:00:00', 4, 7616),
-(17, 14, 'سامر', 'المنفلوطي', 'male', '1100', 'bilalo89@gmail.com', '0999111333', '1122334', 'مساكن برزة', '2013-12-23 00:00:00', 1, 1900);
+(14, 14, 'أحمد', 'الشامي', 'male', '1234', 'bilalo@gmail.com', '093434w', '2320394231', 'برامكة', '2013-12-22 00:00:00', 12, 1560),
+(15, 14, 'أحمد', 'مككي', 'male', '4321', 'bilalo@gmail.com', NULL, NULL, NULL, '2013-12-22 00:00:00', 6, 50030),
+(16, 14, 'تحسين', 'المنفلوطي', 'male', '0011', 'bilalo@gmail.com', '0999111222', '1112223', 'ركن الدين', '2013-12-23 00:00:00', 4, 7616),
+(17, 14, 'سامر', 'المنفلوطي', 'male', '1100', 'bilalo@gmail.com', '0999111333', '1122334', 'مساكن برزة', '2013-12-23 00:00:00', 1, 1900);
 
 -- --------------------------------------------------------
 
@@ -425,7 +425,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `type`, `mobile`, `phone`, `address`, `longitude`, `latitude`, `notes`) VALUES
-(1, 'bilalo89@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'مستخدم', '0999640736', '2755255', 'ركن الدين', NULL, NULL, 'ملاحظة1'),
+(1, 'bilalo@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'مستخدم', '0999640736', '2755255', 'ركن الدين', NULL, NULL, 'ملاحظة1'),
 (86, 'rama@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'صيدلية', NULL, NULL, NULL, NULL, NULL, NULL),
 (87, 'bassam@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'طبيب', '0988204923', NULL, NULL, 33.534527, 36.296366, NULL),
 (93, 'abd@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'مشفى', NULL, NULL, NULL, NULL, NULL, NULL),
